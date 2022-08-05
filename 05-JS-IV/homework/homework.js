@@ -6,13 +6,20 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-}
+var objeto={nombre:nombre, edad:edad, meow(){return "Meow!"}}
+return objeto;
 
+}
 function agregarPropiedad (objeto, property) {
+
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+
+var objeto={property:null};
+return objeto;
+
 }
 
 function invocarMetodo (objeto, metodo) {
@@ -20,13 +27,21 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
+var objeto=objeto;
+
+objeto={metodo:metodo};
+return objeto.metodo;
+
+
+
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-
+  //var objeto= objetoMisterioso;
+  //objeto={numeroMisterioso:}
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
