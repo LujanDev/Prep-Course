@@ -30,19 +30,19 @@ function devolverString(str) {
   return str;
   
 }
-var suma=0;
+var suma1=0;
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
-  suma= x+y;
-  return suma;
+  suma1= x+y;
+  return suma1;
   
 }
-var resta=0;
+var resta1=0;
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
-  resta=x-y;
-  return resta;
+  resta1=x-y;
+  return resta1;
   
 }
 var multiplicacion=0;
@@ -55,7 +55,7 @@ function multiplica(x, y) {
 var division=0;
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
-  division: x/y;
+  division= x/y;
   return division;
   
 }
@@ -72,7 +72,7 @@ function sonIguales(x, y) {
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
-  if(str1==str2){return true;}
+  if(str1.length===str2.length){return true;}
   else{return false;}
 }
 
@@ -187,12 +187,12 @@ function agregarSimboloExclamacion(str) {
   signoExclamacion=str+"!";
   return signoExclamacion;
 }
-var combinarNombres="";
+var combinarNombres1="";
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
-  combinarNombres=nombre+" "+apellido;
-  return combinarNombres;
+  combinarNombres1=nombre+" "+apellido;
+  return combinarNombres1;
   
 }
 var saludo="";
@@ -228,7 +228,7 @@ function areaDelTriangulo(base, altura){
 
 }
 
-var cambioAdolares;
+var cambioAdolares=0;
 function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
@@ -244,14 +244,19 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   
-  if(letra=="a"||letra=="e"||letra=="i"||letra=="0"||letra=="u"){
-    return "Es una vocal";
+  //if((letra === "a"||letra === "e"||letra === "i"||letra === "0"||letra === "u")&&(letra.length===1)){
+  // return "Es vocal";
+   // }else{
+   // return "Dato incorrecto";
+
+   if((letra !== "a"&&letra !== "e"&&letra !== "i"&&letra !== "0"&&letra !== "u")&&(letra.length!==1)){
+    return "Dato incorrecto";
+    
+  }else{
+    return "Es vocal";
   }
-}if(letra.lenght>1){
-  return "Dato incorrecto";
+  
 }
-
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
