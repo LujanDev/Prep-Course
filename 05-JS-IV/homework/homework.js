@@ -16,6 +16,8 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  objeto[property]=null;
+  return objeto;
   
 }
 
@@ -24,16 +26,15 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-
-  
+  objeto[metodo]();
+ 
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  
-
+  return (objetoMisterioso.numeroMisterioso)*5;
 
 }
 
@@ -65,8 +66,13 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-
-
+  
+  if(usuario.email){
+    return true;
+    
+  }else{
+    return false;
+  }
 }
 function tienePropiedad (objeto, propiedad) {
 
@@ -103,8 +109,7 @@ function actualizarPassword (usuario, nuevaPassword) {
   // Devuelve el objeto
   // Tu código:
   
-  
-  usuario["contraseña"]=nuevaPassword; //verificar si funciona "contraseña"
+  usuario["password"]=nuevaPassword; //verificar si funciona
   return usuario;
 
 }
@@ -129,10 +134,13 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-  var usuario={esPremium:true};
-  var usuarios=[usuario];
-  return usuarios;
+  //var usuario={esPremium:true};
+  //var usuarios=[usuario];
   
+  for(var posicion=0; posicion<usuarios.length; posicion++){
+    usuarios[posicion].esPremium=true;
+  }
+  return usuarios;
 
 }
 
@@ -143,8 +151,18 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código: 
-var post[likes]
-usuario={posts: [post]}
+  //usuario={posts: [post]}
+  //var post={likes: }
+//sumar todos los likes post
+//usuario.posts[posicion]
+
+var suma=0;
+for(var posicion=0; posicion<usuario.posts[posicion].length; posicion++){
+  suma=suma+usuario.posts[posicion].likes;
+}
+
+return suma;
+
 
 }
 function agregarMetodoCalculoDescuento (producto) {
@@ -158,11 +176,11 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
   
-  var producto={
-     calcularPrecioDescuento: function (){return producto.precio-(producto.precio*producto.porcentajeDeDescuento);}
-  }
+  
+  producto.calcularPrecioDescuento=function (){return producto.precio-(producto.precio*producto.porcentajeDeDescuento);}
   return producto;
 }
+
 
 // No modificar nada debajo de esta línea
 // --------------------------------

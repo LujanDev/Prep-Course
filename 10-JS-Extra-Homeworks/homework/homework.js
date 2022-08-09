@@ -9,7 +9,13 @@ function deObjetoAmatriz(objeto){
       B: 2,
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
+    /*var obj = { "2": 3, "1": 37, "23": 40, "41": 220, "115": 230 };
+      var arr = Object.keys(obj).map(function (key) {return [Number(key), obj[key]];});
+      console.log(arr);*/
+
   //Escribe tu código aquí
+  var array= Object.entries(objeto);
+  return array;
 }
 
 
@@ -18,6 +24,18 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  
+ // objeto{string[letra]: cantidad}
+  
+  let string1= Array.from(string);
+  
+  var objeto={};
+  for(var letra in string1){
+   
+   objeto[letra];
+
+  }
+  return objeto;
 }
 
 
